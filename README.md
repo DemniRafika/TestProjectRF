@@ -1,2 +1,2 @@
 # TestProjectRF
-Configuration of Robotframework see attached PDF file
+Configuration of Robotframework in the attached PDF file
