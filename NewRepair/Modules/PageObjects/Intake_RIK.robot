@@ -7,7 +7,7 @@ Variables                       Data.py
 Create Intake Repair-In-Kind
      Start new intake
      Fill in General information
-     Fill in person information
+     Fill in Person information
      Fill in Policy  
      Document upload        ${CURDIR}/${DocImagePath}      PNG
      Fill in damage info
@@ -30,7 +30,7 @@ Fill in General information
      Sleep   5                                     
      Click element  //span[normalize-space()='Repair in kind - Single repair']
      Click element  //button[normalize-space()='Proceed']
-Fill in person information
+Fill in Person information
      Input text  //input[@placeholder='Postal Code']      3068LM 
      Input text  //input[@placeholder='House Number']      18
      sleep  3
@@ -71,32 +71,32 @@ Fill in damage info
     #input text    (//input[@role='combobox'])[1]    Fire
     Click element                               (//span[@class='k-select'])[2]    #{causeInput}
     sleep                                       3
-    Mouse Down                                  xpath=//li[text()='Water']
-    Click Element                               xpath=//li[text()='Water']   #xpath=//li[contains(.,'Fire')]
+    Mouse Down                                  xpath=//li[text()='Fire']
+    Click Element                               xpath=//li[text()='Fire']   #xpath=//li[contains(.,'Fire')]
     click element     //input[@id='inftwoyears']
-    input text     (//input[@role='combobox'])[2]     Leakage from devices connected to piping
+    input text     (//input[@role='combobox'])[2]     Human actions
     Sleep    2
     click element    //div[@formarrayname='damageInformations']
     sleep    2
-    input text    (//input[@role='combobox'])[3]    Washing machine
+    input text    (//input[@role='combobox'])[3]    Smoking
     sleep    2
-    input text     (//input[@role='combobox'])[4]    Flat / apartment
+    input text     (//input[@role='combobox'])[4]    Flat / apartment (VVE)
     #Click element    //div[@class='intake-extra-info']
     #Click element    //div[contains(text(),'Add new damage situation')]
     Sleep    3
-    input text     //kendo-combobox[@formcontrolname='location']//input[@role='combobox']    Annex
+    input text     //kendo-combobox[@formcontrolname='location']//input[@role='combobox']    Living room
     Sleep    3
     wait until page contains element    //kendo-combobox[@formcontrolname='object']//input[@role='combobox']      
     Click element    //kendo-combobox[@formcontrolname='object']//span[@class='k-icon k-i-arrow-s']
     Sleep    3
-    Mouse Down                                  xpath=//li[text()='Drainpipes']
-    Click Element                               xpath=//li[text()='Drainpipes']   #xpath=//li[contains(.,'Fire')]
+    Mouse Down                                  xpath=//li[text()='Walls']
+    Click Element                               xpath=//li[text()='Walls']   #xpath=//li[contains(.,'Fire')]
     input text    //kendo-combobox[@formcontrolname='damageType']//input[@role='combobox']   Shattered
     Sleep    2
-    input text    //kendo-combobox[@formcontrolname='materialCategory']//input[@role='combobox']    Various
+    input text    //kendo-combobox[@formcontrolname='materialCategory']//input[@role='combobox']    Walls
     click element    //div[@formarrayname='damageInformations']
     Sleep    3
-    input text    (//input[@role='combobox'])[10]    Wood 
+    input text    (//input[@role='combobox'])[10]    Tiles
     click element    //div[@formarrayname='damageInformations']
     click element    //input[@value='light']
     #Click element     //input[@type='checkbox']
@@ -109,7 +109,8 @@ Planning
     wait until page contains element    //button[normalize-space()='Plan']
     Click button    //button[normalize-space()='Plan']
     Sleep    2
-    Click element    //h6[normalize-space()='AB Lekdetectie']
+    Click element    xpath=/html/body/app-root/kendo-dialog/div[2]/div/app-new-planning-repairer/div/div[2]/div[1]/kendo-tabstrip/div/kendo-listview/div[2]/div/div/div/div
+    Sleep    2
     Click element    //button[normalize-space()='Save']
     Sleep    1
     Click button      (//button[normalize-space()='Proceed'])[1]
