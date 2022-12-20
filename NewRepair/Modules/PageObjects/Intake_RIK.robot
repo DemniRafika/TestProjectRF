@@ -4,7 +4,7 @@ Library                         String
 Variables                       Data.py
 
 *** Keywords ***
-Create Intake RepairInKind
+Create Intake Repair-In-Kind
      Start new intake
      Fill in General information
      Fill in person information
